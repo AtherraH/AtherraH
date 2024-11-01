@@ -2,7 +2,7 @@ package palindrome;
 import java.util.*;
 public class Quicksort {
 static int Partition(int A[],int lb, int ub) {
-		int pivot=A[ub];
+	  int pivot=A[ub];
 		int i=lb-1;
 		for(int j=lb;j<ub;j++) {
 			if(A[j]<=pivot) {
@@ -10,15 +10,15 @@ static int Partition(int A[],int lb, int ub) {
 				int temp=A[i];
 				A[i]=A[j];
 				A[j]=temp;
-			}}
+			}
+		}
 		int temp=A[i+1];
 		A[i+1]=A[ub];
 		A[ub]=temp;
 		return(i+1);
-			}
-	static void quicksort(int A[],int lb,int ub) {
-
-		if(lb<ub) {
+ }
+static void quicksort(int A[],int lb,int ub) {
+	if(lb<ub) {
 			int loc=Partition(A,lb,ub);
 			quicksort(A,lb,loc-1);
 			quicksort(A,loc+1,ub);
@@ -43,8 +43,6 @@ static int Partition(int A[],int lb, int ub) {
 	System.out.println("Sorted array:");
 		for(int i=0;i<n;i++) {
 			System.out.println(A[i]+"");
-
 		}
-		}
+	}
  }
-
